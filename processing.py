@@ -64,3 +64,4 @@ model_data = cleaned_data.copy()
 
 # save the data as a csv
 model_data.to_csv('./dataset/model_data.csv',index=False)
+print('----------successful-----------')
