@@ -1,290 +1,263 @@
 <!-- templates/index.html -->
 
-{% extends "_base.html" %}
-
-{% load static %}
-
-{% block content %}
+{% extends "_base.html" %} {% load static %} {% block content %}
 
 <!-- NAVBAR -->
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
-    <div
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
-    >
-      <a href="#" class="flex items-center">
-        <img src="../../static/images/logoo.png" class="h-8 mr-3" alt="Logo" />
-        <span
-          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-          >Jijue</span
-        >
-      </a>
-      <div class="flex md:order-2">
-        <!-- <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button> -->
-        <button
-          id="theme-toggle"
-          type="button"
-          class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
-        >
-          <svg
-            id="theme-toggle-dark-icon"
-            class="hidden w-5 h-5"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-            ></path>
-          </svg>
-          <svg
-            id="theme-toggle-light-icon"
-            class="hidden w-5 h-5"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
-        <button
-          data-collapse-toggle="navbar-cta"
-          type="button"
-          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="navbar-cta"
-          aria-expanded="false"
-        >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="w-6 h-6"
-            aria-hidden="true"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
-      </div>
-      <div
-        class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-        id="navbar-cta"
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+  >
+    <a href="#" class="flex items-center">
+      <img src="../../static/images/logoo.png" class="h-8 mr-3" alt="Logo" />
+      <span
+        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+        >Jijue</span
       >
-        <ul
-          class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+    </a>
+    <div class="flex md:order-2">
+      <!-- <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button> -->
+      <button
+        id="theme-toggle"
+        type="button"
+        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+      >
+        <svg
+          id="theme-toggle-dark-icon"
+          class="hidden w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <li>
-            <a
-              href="/"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="#about"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >About</a
-            >
-          </li>
-          <li>
-            <a
-              href="#faq"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >FAQs</a
-            >
-          </li>
-          
-          
-          <li>
-            <a
-              href="#contact"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >Contact Us
-            </a>
-          </li>
-        </ul>
+          <path
+            d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+          ></path>
+        </svg>
+        <svg
+          id="theme-toggle-light-icon"
+          class="hidden w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <button
+        data-collapse-toggle="navbar-cta"
+        type="button"
+        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-cta"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-6 h-6"
+          aria-hidden="true"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <div
+      class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+      id="navbar-cta"
+    >
+      <ul
+        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+      >
+        <li>
+          <a
+            href="/"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#about"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#faq"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >FAQs</a
+          >
+        </li>
+
+        <li>
+          <a
+            href="#contact"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >Contact Us
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="flex flex-col items-center justify-center">
+  <!-- Hero -->
+  <section
+    class="mt-6 md:mt-12 lg:mt-12 flex flex-wrap items-center -mx-3 font-sans px-4 mx-auto w-full lg:max-w-screen-lg sm:max-w-screen-sm md:max-w-screen-md pb-20"
+  >
+    <!-- Column-1 -->
+    <div class="px-3 w-full lg:w-2/5">
+      <div
+        class="mx-auto mb-8 max-w-lg text-center lg:mx-0 lg:max-w-md lg:text-left"
+      >
+        <h2 class="mb-4 text-3xl font-bold text-left lg:text-5xl">
+          <span class="dark:text-gray-400"
+            >Leave <br />
+            Worries Behind <br
+          /></span>
+
+          <span class="text-5xl text-blue-500 leading-relaxeds">
+            With HIV Risk Assessment
+          </span>
+        </h2>
+
+        <p
+          class="visible mx-0 mt-3 mb-0 text-sm leading-relaxed text-left text-slate-400"
+        >
+          A safe and fulfilling lifestyle begins here. Live safe and happy.
+        </p>
+      </div>
+
+      <div class="text-center lg:text-left">
+        <!-- Modal toggle -->
+        <a
+          data-modal-target="staticModal"
+          data-modal-toggle="staticModal"
+          class="block visible py-4 px-8 mb-4 text-xs font-semibold tracking-wide leading-none text-white bg-blue-700 hover:bg-blue-800 rounded cursor-pointer sm:mr-3 sm:mb-0 sm:inline-block"
+          >Assess my risk</a
+        >
       </div>
     </div>
-  </nav>
-  
-  <main class="flex flex-col items-center justify-center">
-    <!-- Hero -->
-    <section
-      class="mt-6 md:mt-12 lg:mt-12 flex flex-wrap items-center -mx-3 font-sans px-4 mx-auto w-full lg:max-w-screen-lg sm:max-w-screen-sm md:max-w-screen-md pb-20"
+
+    <!-- Main modal -->
+    <div
+      id="staticModal"
+      data-modal-backdrop="static"
+      tabindex="-1"
+      aria-hidden="true"
+      class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full"
     >
-      <!-- Column-1 -->
-      <div class="px-3 w-full lg:w-2/5">
-        <div
-          class="mx-auto mb-8 max-w-lg text-center lg:mx-0 lg:max-w-md lg:text-left"
-        >
-          <h2 class="mb-4 text-3xl font-bold text-left lg:text-5xl">
-            <span class="dark:text-gray-400"
-              >Leave <br />
-              Worries Behind <br
-            /></span>
-  
-            <span class="text-5xl text-blue-500 leading-relaxeds">
-              With HIV Risk Assessment
-            </span>
-          </h2>
-  
-          <p
-            class="visible mx-0 mt-3 mb-0 text-sm leading-relaxed text-left text-slate-400"
+      <div class="relative w-full h-full max-w-2xl md:h-auto">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div
+            class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
           >
-            A safe and fulfilling lifestyle begins here. Live safe and happy.
-          </p>
-        </div>
-  
-        <div class="text-center lg:text-left">
-          <!-- Modal toggle -->
-          <a
-            data-modal-target="staticModal"
-            data-modal-toggle="staticModal"
-            class="block visible py-4 px-8 mb-4 text-xs font-semibold tracking-wide leading-none text-white bg-blue-700 hover:bg-blue-800 rounded cursor-pointer sm:mr-3 sm:mb-0 sm:inline-block"
-            >Assess my risk</a
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+              Terms of service
+            </h3>
+            <button
+              type="button"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+              data-modal-hide="staticModal"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="p-6 space-y-6">
+            <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
+              Privacy policy
+            </h4>
+            <p
+              class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+            >
+              This website uses log files to collect non-personally identifiable
+              information about visitors, including their IP addresses, browser
+              type, ISP, and website activity. This data is used for analysis,
+              administration, tracking, and demographic research. This privacy
+              policy applies only to online activities on the website.
+              <br />
+              Read more about our
+              <a href="{% url 'privacy' %}" class="text-blue-600"
+                >privacy policy</a
+              >
+              and
+              <a href="{% url 'terms' %}" class="text-blue-600">terms of use</a
+              >.
+            </p>
+            <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
+              Disclaimer
+            </h4>
+            <p
+              class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+            >
+              The Machine-Learning model in the Jijue platform has been designed
+              using credible data. Different variables have been used in the
+              model to compute the risk of an individual turning HIV positive.
+              However the risk score calculated by our website is not final
+              hence it does not reflect your actual HIV status. One can only
+              ascertain his/her HIV status by getting tested from a VCT Centre
+              or by using a self-test kit.
+            </p>
+
+            <h6 class="text-gray-500 dark:text-gray-400">
+              Would you like to continue with HIV Risk Assessment?
+            </h6>
+          </div>
+          <!-- Modal footer -->
+          <div
+            class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
           >
-        </div>
-      </div>
-  
-      <!-- Main modal -->
-      <div
-        id="staticModal"
-        data-modal-backdrop="static"
-        tabindex="-1"
-        aria-hidden="true"
-        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full"
-      >
-        <div class="relative w-full h-full max-w-2xl md:h-auto">
-          <!-- Modal content -->
-          <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-            <!-- Modal header -->
-            <div
-              class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
+            <a
+              type="button"
+              href="{% url 'survey' %}"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
-              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                Terms of service
-              </h3>
-              <button
-                type="button"
-                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                data-modal-hide="staticModal"
-              >
-                <svg
-                  class="w-5 h-5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-            <!-- Modal body -->
-            <div class="p-6 space-y-6">
-              <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
-                Privacy policy
-              </h4>
-              <p
-                class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-              >
-                This website uses log files to collect non-personally identifiable
-                information about visitors, including their IP addresses, browser
-                type, ISP, and website activity. This data is used for analysis,
-                administration, tracking, and demographic research. This privacy
-                policy applies only to online activities on the website.
-                <br />
-                Read more about our
-                <a href="{% url 'privacy' %}" class="text-blue-600"
-                  >privacy policy</a
-                >
-                and
-                <a href="{% url 'terms' %}" class="text-blue-600">terms of use</a
-                >.
-              </p>
-              <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
-                Disclaimer
-              </h4>
-              <p
-                class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-              >
-                The Machine-Learning model in the Jijue platform has been designed
-                using credible data. Different variables have been used in the
-                model to compute the risk of an individual turning HIV positive.
-                However the risk score calculated by our website is not final
-                hence it does not reflect your actual HIV status. One can only
-                ascertain his/her HIV status by getting tested from a VCT Centre
-                or by using a self-test kit.
-              </p>
-  
-              <h6 class="text-gray-500 dark:text-gray-400">
-                Would you like to continue with HIV Risk Assessment?
-              </h6>
-            </div>
-            <!-- Modal footer -->
-            <div
-              class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
+              I accept
+            </a>
+
+            <button
+              data-modal-hide="staticModal"
+              type="button"
+              class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
             >
-              <a
-                type="button"
-                href="{% url 'survey' %}"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                I accept
-              </a>
-  
-              <button
-                data-modal-hide="staticModal"
-                type="button"
-                class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
-              >
-                Decline
-              </button>
-            </div>
+              Decline
+            </button>
           </div>
         </div>
       </div>
-  
-      <!-- Column-2 -->
-      <div class="px-3 mb-12 w-full lg:mb-0 lg:w-3/5">
-        <!-- Illustrations Container -->
-        <div class="flex justify-center items-center">
-          <svg
-            class="block max-w-full h-auto align-middle lg:max-w-lg fill-blue-500"
-            height="400"
-            viewBox="0 0 479 467"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
-            <mask id="mask0" mask-type="alpha">
-              <path
-                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
-              />
-            </mask>
-            <g mask="url(#mask0)">
-              <path
-                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
-              />
-              <image
-                class=""
-                x="50"
-                y="60"
-                href="{% static 'images/home.jpg' %}"
-              />
-            </g>
-          </svg>
-        </div>
+    </div>
+
+    <!-- Column-2 -->
+    <div class="px-3 mb-12 w-full lg:mb-0 lg:w-3/5">
+      <!-- Illustrations Container -->
+      <div class="flex justify-center items-center">
+        <image class="" x="50" y="60" href="{% static 'images/home.jpg' %}" />
       </div>
-    </section>
-{% endblock content %}
+    </div>
+  </section>
+  {% endblock content %}
+</main>
