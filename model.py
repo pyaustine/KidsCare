@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from tensorflow.keras.models import load_model
 
 # read data
-model_data = pd.read_csv('./dataset/model_data.csv')
+model_data = pd.read_csv("./dataset/model_data.csv")
 
 # split data
 X = model_data.drop(columns=['ASD_Traits'])
