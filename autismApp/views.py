@@ -7,14 +7,17 @@ from tensorflow.keras.models import load_model
 
 # Create your views here.
 
+# def home(request):
+#     return render(request, 'autismApp/index.html')
+
 def home(request):
-    return render(request, 'autismApp/index.html')
+    return render(request, 'autismApp/main.html')
 
 def welcome(request):
     return render(request, 'autismApp/welcome.html')
 
 def survey(request):
-    return render(request, 'autismApp/form.html')
+    return render(request, 'autismApp/survey.html')
 
 
 model = load_model('./savedModel/model.h5')
@@ -69,7 +72,7 @@ def predictor(request):
         userresult.save()
 
         return render(request, 'autismApp/result.html', {'result': outcome})
-    return render(request, 'autismApp/form.html')
+    return render(request, 'autismApp/survey.html')
 
 
 def privacy_policy(request):
