@@ -3,10 +3,9 @@ from . models import Result
 
 # third party imports
 
-#from tensorflow.keras.models import load_model
+from tensorflow.keras.models import load_model
 
 # Create your views here.
-
 
 def home(request):
     return render(request, 'autismApp/index.html')
@@ -18,7 +17,7 @@ def survey(request):
     return render(request, 'autismApp/form.html')
 
 
-#model = load_model('./savedModel/model.h5')
+model = load_model('./savedModel/model.h5')
 
 
 def predictor(request):
@@ -39,7 +38,7 @@ def predictor(request):
         asd_history = request.POST['asd_history']
         completed_by = request.POST['completed_by']
         
-        #outcome = model.predict([[a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, age, sex, jaundice, asd_history, completed_by]])
+        outcome = model.predict([[a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, age, sex, jaundice, asd_history, completed_by]])
 
         if outcome <= 0.5:
             outcome = 'LOW RISK'
