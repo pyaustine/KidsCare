@@ -20,6 +20,7 @@ data = pd.read_csv("./dataset/data.csv")
 # renaming columns
 data.rename(columns={'Class/ASD Traits ': 'ASD_Traits'}, inplace=True)
 data.rename(columns={'Who completed the test': 'Test completed by'}, inplace=True)
+data.rename(columns={'Age_Mons': 'Age'}, inplace=True)
 
 # Drop unnecessary colums
 data.drop(columns=['Case_No'], inplace=True)
@@ -42,8 +43,11 @@ cleaned_data['Jaundice'] = cleaned_data['Jaundice'].replace({'no': 0, 'yes': 1})
 cleaned_data['Family_mem_with_ASD'] = data['Family_mem_with_ASD'].replace({'no': 0, 'yes': 1})
 cleaned_data['ASD_Traits'] = cleaned_data['ASD_Traits'].replace({'No': 0, 'Yes': 1})
 
+# drop columns
+cleaned_data.drop(columns=['Ethnicity', 'Qchat-10-Score'], inplace=True)
+
 # Columns to one-hot encode
-categorical_columns = ['Ethnicity', 'Test completed by']
+categorical_columns = ['Test completed by']
 
 # Create one-hot encoded DataFrames for the selected columns
 one_hot_encoded = pd.get_dummies(cleaned_data[categorical_columns])
@@ -58,6 +62,8 @@ cleaned_data = pd.concat([cleaned_data, one_hot_encoded], axis=1)
 column_order = [col for col in cleaned_data.columns if col != 'ASD_Traits'] + ['ASD_Traits']
 cleaned_data = cleaned_data[column_order]
 
+
+print(cleaned_data.columns)
 
 # make a copy of the data for modelling
 model_data = cleaned_data.copy()
