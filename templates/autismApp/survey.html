@@ -87,7 +87,7 @@
     <h2
       class="mb-4 text-4xl tracking-tight font-bold text-center text-gray-900 dark:text-white"
     >
-      Autism Diagnosis Form
+      Autism Screening Form
     </h2>
     <p
       class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-2xl"
@@ -107,8 +107,8 @@
           type="number"
           name="age"
           id="number"
-          min="10"
-          max="99"
+          min="12"
+          max="36"
           class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
           placeholder="Enter your age"
           required
@@ -740,7 +740,7 @@
           class="block mb-4 text-xl font-medium text-gray-900 dark:text-gray-300"
         >
           If you or someone else in the family is visibly upset, does your child
-          show signs of wan9ng to comfort them? (e.g. stroking hair, hugging
+          show signs of wanting to comfort them? (e.g. stroking hair, hugging
           them)
         </p>
 
@@ -1015,7 +1015,7 @@
           <input
             id="default-radio-1"
             type="radio"
-            value="0"
+            value="1"
             name="a10"
             class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             required
@@ -1030,7 +1030,7 @@
           <input
             id="default-radio-1"
             type="radio"
-            value="0"
+            value="1"
             name="a10"
             class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             required
@@ -1062,7 +1062,7 @@
           <input
             id="default-radio-1"
             type="radio"
-            value="1"
+            value="0"
             name="a10"
             class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             required
@@ -1078,7 +1078,7 @@
           <input
             id="default-radio-1"
             type="radio"
-            value="1"
+            value="0"
             name="a10"
             class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             required
@@ -1087,6 +1087,47 @@
             for="default-radio-1"
             class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
             >Never</label
+          >
+        </div>
+      </div>
+      <hr />
+
+      <!-- A10 -->
+      <div>
+        <p
+          class="block mb-4 text-xl font-medium text-gray-900 dark:text-gray-300"
+        >
+          Do you have any family member diagnosed with Autism?
+        </p>
+
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="1"
+            name="asd_history"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Yes</label
+          >
+        </div>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="0"
+            name="asd_history"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >No</label
           >
         </div>
       </div>
@@ -1119,7 +1160,7 @@
           <input
             id="default-radio-1"
             type="radio"
-            value="0"
+            value="1"
             name="test_completed_by"
             class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             required
@@ -1130,9 +1171,23 @@
             >Healthcare professional</label
           >
         </div>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="0"
+            name="test_completed_by"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Other</label
+          >
+        </div>
       </div>
       <hr />
-
 
       <!-- button -->
 
