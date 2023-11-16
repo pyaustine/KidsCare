@@ -22,37 +22,44 @@ def survey(request):
 
 model = load_model('./savedModel/model.h5')
 
+import numpy as np
+
+model = load_model('./savedModel/model.h5')
 
 def predictor(request):
     if request.method == 'POST':
-        age = request.POST['age']
-        sex = request.POST['sex']
-        a1 = request.POST['a1']
-        a2 = request.POST['a2']
-        a3 = request.POST['a3']
-        a4 = request.POST['a4']
-        a5 = request.POST['a5']
-        a6 = request.POST['a6']
-        a7 = request.POST['a7']
-        a8 = request.POST['a8']
-        a9 = request.POST['a9']
-        a10 = request.POST['a10']
-        jaundice = request.POST['jaundice']
-        asd_history = request.POST['asd_history']
-        completed_by = request.POST['completed_by']
-        
-        outcome = model.predict([[a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, age, sex, jaundice, asd_history, completed_by]])
+        age = float(request.POST['age'])
+        sex = int(request.POST['sex'])
+        a1 = int(request.POST['a1'])
+        a2 = int(request.POST['a2'])
+        a3 = int(request.POST['a3'])
+        a4 = int(request.POST['a4'])
+        a5 = int(request.POST['a5'])
+        a6 = int(request.POST['a6'])
+        a7 = int(request.POST['a7'])
+        a8 = int(request.POST['a8'])
+        a9 = int(request.POST['a9'])
+        a10 = int(request.POST['a10'])
+        jaundice = int(request.POST['jaundice'])
+        asd_history = int(request.POST['asd_history'])
+        test_completed_by = int(request.POST['test_completed_by'])
 
-        if outcome <= 0.5:
+        # Prepare input data for prediction
+        input_data = np.array([[a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, age, sex, jaundice, asd_history, test_completed_by]])
+
+        # Make prediction
+        outcome_prob = model.predict(input_data)[0][0]
+        outcome = np.round(outcome_prob).astype(int)
+
+        print('The outcome is', outcome)
+
+        if outcome <= 0:
             outcome = 'LOW RISK'
-
-        elif outcome > 0.5 or outcome <= 0.75:
-            outcome = 'MODERATE'
-
         else:
             outcome = 'HIGH RISK'
 
-        userresult = Result.objects.create(age=age,
+        # Assuming Result is your model output table
+        user_outcome = Result.objects.create(age=age,
                                            sex=sex,
                                            a1=a1,
                                            a2=a2,
@@ -66,13 +73,14 @@ def predictor(request):
                                            a10=a10,
                                            jaundice=jaundice,
                                            asd_history=asd_history,
-                                           completed_by=completed_by,
+                                           test_completed_by=test_completed_by,
                                            outcome=outcome
                                            )
-        userresult.save()
+        user_outcome.save()
 
         return render(request, 'autismApp/result.html', {'result': outcome})
     return render(request, 'autismApp/survey.html')
+
 
 
 def privacy_policy(request):
