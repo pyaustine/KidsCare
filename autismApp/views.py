@@ -1,15 +1,12 @@
 from django.shortcuts import render
 from . models import Result
+import numpy as np
 
 # third party imports
 
 from tensorflow.keras.models import load_model
 
 # Create your views here.
-
-# def home(request):
-#     return render(request, 'autismApp/index.html')
-
 def home(request):
     return render(request, 'autismApp/main.html')
 
@@ -22,9 +19,6 @@ def survey(request):
 
 model = load_model('./savedModel/model.h5')
 
-import numpy as np
-
-model = load_model('./savedModel/model.h5')
 
 def predictor(request):
     if request.method == 'POST':
