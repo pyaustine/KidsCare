@@ -1,6 +1,6 @@
-# from django.urls import path
-# from . import views
+from django.urls import path
+from api import views
 
-# urlpatterns = [
-#     path("", views.test, name='test'),
-# ]
+urlpatterns = [
+    path("", views.test, name='test'),
+]
