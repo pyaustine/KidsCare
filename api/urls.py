@@ -1,6 +1,16 @@
 from django.urls import path
-from api import views
+from django.urls import re_path as url, path, include
+from rest_framework import permissions
+
+from . import views
+from .views import predictAPIView
+
+api_patterns = [
+    path('test/', views.testEndpoint, name='test'),
+    path('predict/', predictAPIView.as_view(), name='predict')
+]
 
 urlpatterns = [
-    path("", views.test, name='test'),
+    url(r'^$', views.getRoutes, name='routes'),
+    url(r'^', include(api_patterns)),
 ]
