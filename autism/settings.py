@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'compressor',  # new
 
     'autismApp',
-    'api'
+
+    # api
+    'api',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
