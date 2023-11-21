@@ -2,6 +2,9 @@ from autismApp import models
 from rest_framework import serializers
 
 # input serializer
+"""
+input fields from the user
+"""
 class PredictionInputSerializer(serializers.Serializer):
     age =  serializers.FloatField()
     sex = serializers.IntegerField()
@@ -21,3 +24,8 @@ class PredictionInputSerializer(serializers.Serializer):
 
 
 # output serializer
+"""
+output field for predicted result
+"""
+class PredictionOutputSerializer(serializers.Serializer):
+    result = serializers.CharField
