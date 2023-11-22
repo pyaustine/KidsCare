@@ -17,7 +17,7 @@ def survey(request):
     return render(request, 'autismApp/survey.html')
 
 
-model = load_model('./savedModel/model.h5')
+model = load_model('./savedModel/ann_model.h5')
 
 
 def predictor(request):
