@@ -62,7 +62,7 @@ svm_accuracy = accuracy_score(y_test, svm_predictions)
 
 
 # Print accuracy and classification report
-print("SVM Accuracy:", svm_accuracy)
+print("-----------------------SVM Accuracy: ", svm_accuracy)
 
 # Save the model using joblib
 joblib.dump(svm_classifier, './savedModel/svm_model.joblib')
