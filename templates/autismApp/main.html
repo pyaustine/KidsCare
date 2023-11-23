@@ -30,24 +30,24 @@
                 </div>
                 <div class="hidden lg:flex lg:gap-x-12 ">
 
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">About</a>
+                    <a href="#about" class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">About</a>
 
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">Capabilities</a>
+                    <a href="#capabilities" class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">Capabilities</a>
 
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">Limitations</a>
+                    <a href="#limitations" class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">Limitations</a>
 
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">Contact Us</a>
+                    <a href="#contact" class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">Contact Us</a>
                 </div>
 
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">API documentation<span
+                    <a href="{% url 'routes' %}" class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">API documentation<span
                             aria-hidden="true">&rarr;</span></a>
                 </div>
-
+            
             </nav>
     </div>
     </header>
-
+<section>
         <div class="text-center mt-20 mx-auto max-w-2xl py-10 sm:py-48 lg:py-16">
             <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-gray-100">KidsCare</h1>
 
@@ -71,10 +71,119 @@
             </svg>
         </div>
 
-        <!-- button here -->
+        <!-- button for modal here -->
         <div class="flex justify-center mt-10">
-            <a type="button" href="{% url 'survey' %}" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Start screening</a>
+            <a type="button"
+            data-modal-target="staticModal"
+            data-modal-toggle="staticModal"
+            class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Start screening</a>
         </div>
+
+
+        <!-- modal here -->
+        <!-- Main modal -->
+    <div
+    id="staticModal"
+    data-modal-backdrop="static"
+    tabindex="-1"
+    aria-hidden="true"
+    class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full"
+  >
+    <div class="relative w-full h-full max-w-2xl md:h-auto">
+      <!-- Modal content -->
+      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <!-- Modal header -->
+        <div
+          class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
+        >
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            Terms of service
+          </h3>
+          <button
+            type="button"
+            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+            data-modal-hide="staticModal"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <!-- Modal body -->
+        <div class="p-6 space-y-6">
+          <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
+            Privacy policy
+          </h4>
+          <p
+            class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+          >
+            This website uses log files to collect non-personally identifiable
+            information about visitors, including their IP addresses, browser
+            type, ISP, and website activity. This data is used for analysis,
+            administration, tracking, and demographic research. This privacy
+            policy applies only to online activities on the website.
+            <br />
+            Read more about our
+            <a href="{% url 'privacy' %}" class="text-blue-600"
+              >privacy policy</a
+            >
+            and
+            <a href="{% url 'terms' %}" class="text-blue-600">terms of use</a
+            >.
+          </p>
+          <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
+            Disclaimer
+          </h4>
+          <p
+            class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+          >
+            The Machine-Learning model in this platform has been designed
+            using credible data. Different variables have been used in the
+            model to compute the risk of a child having Autism.
+            However the risk score calculated by our website is not final
+            hence it does not reflect the kid's actual status. One can only
+            ascertain his/her Autism status by getting tested from a credible
+            healthcare facility.
+          </p>
+
+          <h6 class="text-gray-500 dark:text-gray-400">
+            Would you like to continue with Autism Screening?
+          </h6>
+        </div>
+        <!-- Modal footer -->
+        <div
+          class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
+        >
+          <a
+            type="button"
+            href="{% url 'survey' %}"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            I accept
+          </a>
+
+          <button
+            data-modal-hide="staticModal"
+            type="button"
+            class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+          >
+            Decline
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
 
         <div
@@ -94,5 +203,26 @@
         </div>
     </div>
     </div>
+</section>
+<!-- 
+<section id="about">
+    <h3>About KidsCare</h3>
+</section>
+
+<section id="capabilities">
+    <h3>About KidsCare</h3>
+</section>
+
+<section id="limitations">
+    <h3>About KidsCare</h3>
+</section>
+
+<section id="contact">
+    <h3>About KidsCare</h3>
+</section> -->
+
+
+
+<!-- Footer -->
 
 {% endblock content %}
