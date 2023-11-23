@@ -18,22 +18,19 @@
     <!-- DARK MODE -->
     <script>
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-      if (
-        localStorage.getItem("color-theme") === "dark" ||
-        (!("color-theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        document.documentElement.classList.add("dark");
+      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
       } else {
-        document.documentElement.classList.remove("dark");
+          document.documentElement.classList.remove('dark')
       }
     </script>
 
     <!-- Vanilla JS -->
-    <script src="../../static/main/index.js"></script>
+    <script src="../../static/js/main.js"></script>
+    <script src="../../static/js/index.js"></script>
 
     <!-- HTMX -->
-    <script src="../../static/htmx/htmx.min.js"></script>
+    {% comment %} <script src="../../static/htmx/htmx.min.js"></script> {% endcomment %}
 
     <title>Autism Spectrum Disorder Diagnosis | KidsCare</title>
 
