@@ -3,7 +3,6 @@ from . models import Result
 import numpy as np
 
 # third party imports
-
 from tensorflow.keras.models import load_model
 
 # Create your views here.
