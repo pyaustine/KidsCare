@@ -62,7 +62,7 @@ rf_accuracy = accuracy_score(y_test, rf_predictions)
 
 
 # Print accuracy and classification report
-print("-------------Random Forest Accuracy:", rf_accuracy)
+print("-------------Random Forest Accuracy: ", rf_accuracy)
 
 
 # Save the model using joblib
