@@ -63,7 +63,7 @@ model.fit(X_train, y_train, epochs=20, batch_size=32, validation_data=(X_test, y
 
 # Evaluate the model on the testing data
 ann_accuracy = model.evaluate(X_test, y_test)
-print("ANN Accuracy:", ann_accuracy)
+print("---------------------ANN Accuracy:", ann_accuracy)
 
 # Save the model
 model.save('./savedModel/ann_model.h5')
