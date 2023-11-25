@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'compressor',  # new
 
     'autismApp',
+    'appointment',
 
     # api
     'api',
@@ -87,8 +88,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-database_url = os.environ.get("DATABSE_URL")
-DATABASES["default"] = dj_database_url.parse(database_url)
+# database_url = os.environ.get("DATABSE_URL")
+# DATABASES["default"] = dj_database_url.parse(database_url)
 
 
 # Password validation
