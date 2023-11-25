@@ -1,4 +1,4 @@
-# autism-spectrum-disorder-project
+# KidsCare AI
 Final year project.
 
 # To Start
