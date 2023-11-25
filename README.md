@@ -1,5 +1,5 @@
 # KidsCare AI
-Final year project.
+KidsCare AI is an AI tool that help detect Autism in Toddler. This was my final year project in JKUAT.
 
 # To Start
 
