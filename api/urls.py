@@ -11,6 +11,6 @@ api_patterns = [
 ]
 
 urlpatterns = [
-    url(r'^$', views.getRoutes, name='routes'),
+    url(r'^$', views.getRoutes, name='api-routes'),
     url(r'^', include(api_patterns)),
 ]
