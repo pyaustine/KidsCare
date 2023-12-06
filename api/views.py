@@ -62,7 +62,7 @@ class predictAPIView(APIView):
                                 ]])
                 
         # load model
-        model = load_model('./savedModel/model.h5')
+        model = load_model('./savedModel/ann_model.h5')
 
         # make prediction
         outcome_prob = model.predict(input_data)[0][0]
