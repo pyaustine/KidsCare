@@ -133,7 +133,7 @@ COMPRESS_ROOT = BASE_DIR / 'static'
 
 COMPRESS_ENABLED = True
 
-# STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
+STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
