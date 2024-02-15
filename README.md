@@ -1,5 +1,5 @@
 # KidsCare AI
-KidsCare AI is an AI tool that help detect Autism in Toddlers. This was my final year project in JKUAT.
+KidsCare AI is an AI tool that help detect Autism in Toddlers.
 
 # To Start
 
