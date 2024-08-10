@@ -59,4 +59,4 @@ And navigate to http://127.0.0.1:8000/
 
 ALL SET.
 
-#### Having problems, check out: https://flowbite.com/docs/getting-started/django/
+#### Having problems? check out: https://flowbite.com/docs/getting-started/django/
