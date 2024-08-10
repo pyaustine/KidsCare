@@ -1,5 +1,5 @@
-# KidsCare AI
-KidsCare AI is an AI tool that help detect Autism in Toddlers.
+# KidsCare
+KidsCare is a ML tool that help detect Autism in Toddlers.
 
 # To Start
 
