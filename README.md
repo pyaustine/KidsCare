@@ -1,5 +1,5 @@
 # KidsCare
-KidsCare is a ML tool that help detect Autism in Toddlers.
+KidsCare is a ML tool that help detect Autism in Toddlers. The ML is integrated to a WhatsApp bot aas well as a web application.
 
 # To Start
 
